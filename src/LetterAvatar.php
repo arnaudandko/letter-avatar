@@ -131,12 +131,7 @@ class LetterAvatar
             "#f1c40f", "#e67e22", "#e74c3c", "#ecf0f1", "#95a5a6", "#f39c12", "#d35400", "#c0392b", "#bdc3c7", "#7f8c8d",
         ];
 
-        $char_index  = ord($this->name_initials[0]) - 64;
-        $color_index = $char_index % 20;
-        $color       = $colors[$color_index];
-        if (!$color) {
-            $color   = $colors[rand(0, count($colors)-1)];
-        }
+        $color   = $colors[rand(0, count($colors)-1)];
 
         if ($this->shape == 'circle') {
             $canvas = $this->image_manager->canvas(480, 480);
